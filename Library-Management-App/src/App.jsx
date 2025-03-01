@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import MyBooks from './pages/MyBooksPage';
+import "./styles/global.css";
 
 function App() {
   const user = useSelector((state) => state.user);

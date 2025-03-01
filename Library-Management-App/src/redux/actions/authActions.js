@@ -1,9 +1,9 @@
 import {auth} from "../../firebase/firebaseConfig";
-import { signInWithEmailAndPassword,crreateUserWithEmailAndPassword,signOut } from "firebase/auth";
+import { signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut } from "firebase/auth";
 
 export const registerUser = (email, password) => async dispatch => {
     try {
-        const userCredential = await crreateUserWithEmailAndPassword(auth, email, password);
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         dispatch({type: "REGISTER_SUCCESS", payload: user});
     }catch (error) {
